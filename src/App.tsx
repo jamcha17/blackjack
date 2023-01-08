@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Dealer } from './components/Dealer';
+import {Deck} from './components/Deck';
+import HandDisplay from './components/HandDisplay';
+import { Player } from './components/Player';
 
+let standardDeck: Deck = new Deck(["spades", "clubs", "diamonds", "hearts"], [1,2,3,4,5,6,7,8,9,10,11,12,13], 10, 1);
+let player : Player = new Player(standardDeck, 1000, 21, 5);
+let dealer : Dealer = new Dealer(standardDeck, 21, 17);
+
+/**
+ * Create Application by handing over display to HandDisplay
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HandDisplay deck={standardDeck} player={player} dealer={dealer}/>
     </div>
   );
 }

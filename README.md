@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Black Jack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Project is a recreation of Blackjack.
 
-## Available Scripts
+## Default React Boilerplate For How to Run the Project
 
 In the project directory, you can run:
 
